@@ -1,0 +1,87 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="AcademicCalendarLeaveManagement.Login" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+<title>Login - Academic Leave Management</title>
+<style>
+body {
+    font-family: Arial;
+    background-color: #f2f5f9;
+    margin: 0;
+}
+.box {
+    width: 360px;
+    margin: 100px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px #bbb;
+}
+h2 {
+    text-align: center;
+    color: #233750;
+}
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    box-sizing: border-box;
+}
+.btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.message {
+    color: red;
+    display: block;
+    margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+<form id="form1" runat="server">
+<div class="box">
+<h2>Academic Leave Management</h2>
+
+<label>Username</label>
+<asp:TextBox
+    ID="txtUsername"
+    runat="server">
+</asp:TextBox>
+
+<label>Password</label>
+<asp:TextBox
+    ID="txtPassword"
+    runat="server"
+    TextMode="Password">
+</asp:TextBox>
+
+<asp:Button
+    ID="btnLogin"
+    runat="server"
+    Text="Login"
+    CssClass="btn"
+    OnClick="btnLogin_Click" />
+
+<asp:Label
+    ID="lblMessage"
+    runat="server"
+    CssClass="message">
+</asp:Label>
+
+</div>
+</form>
+</body>
+</html>
